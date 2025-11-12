@@ -58,3 +58,13 @@ canvas {
     height: auto;
     display: block;
 }
+
+/* Keep certificate SVG within the viewport to avoid scrolling */
+svg#certificate {
+    max-height: 70vh; /* reduce from previous to fit better */
+    max-width: 95vw;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
