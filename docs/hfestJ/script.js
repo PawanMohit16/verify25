@@ -21,7 +21,6 @@ fetch("data.json")
             const certHeader = document.getElementById("cert-header");
             const certificate = document.getElementById("certificate");
 
-
             certHeader.classList.remove("hidden");
             certificate.classList.remove("hidden");
 
@@ -37,6 +36,12 @@ fetch("data.json")
                 colorLight: "#ffffff"
             });
         } else {
+            // Hide certificate and QR if not found
+            document.getElementById("cert-header").classList.add("hidden");
+            document.getElementById("certificate").classList.add("hidden");
+            if (document.getElementById("qr-container")) {
+                document.getElementById("qr-container").innerHTML = "";
+            }
             console.error("No matching entry found for the provided code.");
         }
     })
