@@ -3,6 +3,8 @@ body {
     max-width: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap');
+
 @font-face {
     font-family: "Baskerville-old-face";
     src: url("/verify24/assests/fonts/BASKVILL.ttf") format("truetype");
@@ -22,6 +24,8 @@ body {
                         
 #name-element {
     font-size: 62.0px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-weight: 700;
 }
 
 .header {
@@ -53,4 +57,14 @@ canvas {
     max-width: 250.0px;
     height: auto;
     display: block;
+}
+
+/* Keep certificate SVG within the viewport to avoid scrolling */
+svg#certificate {
+    max-height: 70vh; /* reduce from previous to fit better */
+    max-width: 95vw;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
